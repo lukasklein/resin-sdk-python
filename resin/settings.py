@@ -35,9 +35,9 @@ class Settings(object):
         'api_endpoint': 'https://api.resin.io/',
         'data_directory': Path.join(HOME_DIRECTORY, '.resin'),
         # cache time : 1 week in milliseconds
-        'image_cache_time': (1 * 1000 * 60 * 60 * 24 * 7),
+        'image_cache_time': str(1 * 1000 * 60 * 60 * 24 * 7),
         # token refresh interval: 1 hour in milliseconds
-        'token_refresh_interval': (1 * 1000 * 60 * 60)
+        'token_refresh_interval': str(1 * 1000 * 60 * 60)
     }
 
     _setting['cache_directory'] = Path.join(_setting['data_directory'],
