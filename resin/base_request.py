@@ -4,7 +4,10 @@ import urllib
 from string import Template
 import os
 
-from urlparse import urljoin
+try:
+    from urlparse import urljoin
+except ImportError:
+    from urllib.parse import urljoin
 
 from .settings import Settings
 from .token import Token
