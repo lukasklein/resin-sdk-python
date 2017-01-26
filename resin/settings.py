@@ -69,7 +69,7 @@ class Settings(object):
         if not Path.isdir(self._setting['data_directory']):
             os.makedirs(self._setting['data_directory'])
         with open(Path.join(self._setting['data_directory'],
-                            self.CONFIG_FILENAME), 'wb') as config_file:
+                            self.CONFIG_FILENAME), 'w') as config_file:
             config.write(config_file)
 
     def __read_settings(self):
